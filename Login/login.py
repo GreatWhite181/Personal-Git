@@ -4,21 +4,22 @@ except ImportError:
     from tkinter import *
 
 registered = ['Lon Sally']
-registeredLower = [i.lower() for i in registered]
 
 
 def login(*args):
     loginUser = usr.get()
     passUser = pss.get()
     combo = loginUser + ' ' + passUser
-    if combo in registered or combo in registeredLower:
+    if combo in registered:
         popup = Tk()
         popup.attributes('-topmost', True)
         Label(popup, text="Yokozo").grid()
         Button(popup, text="ok", command=None).grid()
         popup.mainloop()
     else:
-        Label(loginFrame, text='Incorrect Username or Password').grid(row=3, columnspan=3)
+        Bad = Label(loginFrame, text='Incorrect Username or Password')
+        Bad.grid(row=3, columnspan=3)
+        Bad.after(5000, lambda: Bad.grid_remove())
 
 
 def register():
