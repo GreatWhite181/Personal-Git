@@ -1,4 +1,4 @@
-try:    #New Directory
+try:
     from Tkinter import *
 except ImportError:
     from tkinter import *
