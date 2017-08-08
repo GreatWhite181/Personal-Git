@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+        <script>
+
+        function alertt() {
+            alert('I love ' +  document.getElementById("inputBox").value + '.')
+            if (document.getElementById("inputBox").value === 'Leon') {
+                document.getElementById("inputBox").style.border = "solid 2px rgb(58, 222, 133)";
+            }
+        }
+
+        </script>
+        <style>
+        html {
+            background: linear-gradient(to bottom right, #1FA2FF, #12D8FA, #81f1c9);
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #262626;
+        }
+
+        #inputBoxTitle {
+            color: #313239;
+            font-size: 26px;
+            font-weight: bold;
+            transition: 1s;
+            text-align: center;
+        }
+
+        #inputBox {
+            padding: 12px;
+            font-size: 20px;
+            width: 70%;
+            border-radius: 6px;
+            border: solid 2px white;
+            margin: 18px 0;
+            text-align: center;
+        }
+
+        #inputBox:focus {outline:0;}
+
+        button {
+            border-radius: 14px;
+            padding: 15px 15%;
+            color: #313239;
+            text-decoration: none;
+            font-size: 16px;
+            transition-duration: 0.7s;
+            background-color: white;
+            border: 2px solid #1FA2FF;
+        }
+
+        button:hover {
+            background: #1FA2FF;
+            color: white;
+        }
+
+        button:focus {outline:0;}
+
+        #box {
+            background: #e9ecef;
+            width: 35%;
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin: 5% auto;
+        }
+
+        #buttonDiv, #inputDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <div id='box'>
+            <div id='inputBoxTitle'>Enter some text: </div><div id='inputDiv'><input type="text" id="inputBox"/></div>
+            <div id='buttonDiv'><button class="button" onclick="alertt();">mitSub?</button></div>
+        </div>
+    </body>
+</html>
